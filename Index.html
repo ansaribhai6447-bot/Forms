@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #1f1c2c, #928dab);
+        margin: 0;
+        padding: 20px;
+        color: #fff;
+    }
+
+    h1 {
+        text-align: center;
+        color: #ffd700;
+        text-shadow: 2px 2px 4px black;
+    }
+
+    p {
+        
+        margin-bottom: 20px;
+    }
+
+    form {
+        max-width: 600px;
+        margin: auto;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
+    }
+
+    form div {
+        margin-bottom: 15px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 6px;
+        font-weight: bold;
+    }
+
+    input,
+    select,
+    button {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 6px;
+        font-size: 14px;
+    }
+
+    input,
+    select {
+        background: #f9f9f9;
+        color: black;
+    }
+
+    button {
+        background: #ffd700;
+        color: black;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #e6c200;
+        transform: scale(1.05);
+    }
+
+    /* Radio buttons line me lane ke liye */
+    input[type="radio"] {
+        width: auto;
+        margin-right: 5px;
+    }
+
+    /* Gender ke labels ko inline */
+    div p+input,
+    div p+input+label,
+    div input[type="radio"],
+    div label[for="Male"],
+    div label[for="Female"],
+    div label[for="other"] {
+        display: inline-block;
+        width: auto;
+        margin-right: 15px;
+    }
+</style>
+
+<body>
+    <h1>Registeration Form - Smit</h1>
+    <div>
+        <a href="https://forms.saylanimit.com/en"><button type="button">Student Portal</button></a>
+    </div>
+    <p>Services - Education - Registration</p>
+    <form action="./php">
+        <div><label for="country">Select Country</label>
+            <select name="country" id="country" `>
+                <option value="" disabled selected>Select Country</option>
+                <option value="Pakistan">Pakistan</option>
+                <option value="Saudi Arab">Saudi Arab</option>
+                <option value="Turkey">Turkey</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="city">Select City</label>
+            <select name="city" id="city">
+                <option value="" disabled selected>Select City</option>
+                <option value="Karachi">Karachi</option>
+                <option value="Quetta">Quetta</option>
+                <option value="Islamabad">Islamabad</option>
+            </select>
+        </div>
+        <div>
+            <label for="course">Select Course</label>
+            <select name="course" id="course">
+                <option value="" disabled selected>Select Course</option>
+                <option value="AI and Data Science">AI and Data Science</option>
+                <option value="AI and Data Science">AI and Data Science</option>
+                <option value="web and app dev">Web and App Development</option>
+                <option value="Digital Marketing">Digital Marketing</option>
+            </select>
+        </div>
+        <div>
+            <p>Gender:</p>
+            <input value="Male" type="radio" id="Male" name="Gender">
+            <label for="Male">Male</label>
+
+
+            <input value="Female" type="radio" id="Female" name="Gender">
+            <label for="Female">Female</label>
+
+            <input value="other" type="radio" name="Gender" id="other">
+            <label for="other">Other</label>
+        </div>
+        <div>
+            <label for="FN">Full name</label>
+            <input type="text" placeholder="Full name" id="FN" name="Full name">
+        </div>
+        <div>
+            <label for="Fn">Father Name</label>
+            <input type="text" id="Fn" placeholder="Father name" name="Father name">
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter Email" required>
+        </div>
+        <div>
+            <label for="cnic">CNIC</label>
+            <input type="text" id="cnic" name="cnic" placeholder="Enter CNIC required">
+        </div>
+        <div>
+            <label for="fcnic"> Father CNIC(optional)</label>
+            <input type="text" id="fcnic" name="Father cnic" placeholder="Enter Father CNIC" required>
+        </div>
+        <div>
+            <label for="DOB">Date of Birth</label>
+            <input type="date" id="DOB" Name="DOB" required>
+        </div>
+        <div>
+            <label for="cp">Select your Computer Profeciency</label>
+            <select name="Cp" id="cp">
+                <option value="" disabled selected>Select</option>
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="Professional">Professional</option>
+            </select>
+        </div>
+        <div>
+            <label for="address">Address</label>
+            <input type="text" name="Address" id="address" placeholder="Enter you address">
+        </div>
+        <div>
+            <label for="Qualification">Qualification</label>
+            <select name="Qualification" id="Qualification">
+                <option value="" disabled selected>Select Qualification</option>
+                <option value="Qualification">Matric</option>
+                <option value="Qualification">Intermediate</option>
+                <option value="Qualification">Graduate</option>
+                <option value="Qualification">Other</option>
+            </select>
+        </div>
+        <div>
+            <label for="Laptop">Do you have Laptop</label>
+            <select name="Laptop" id="Laptop">
+                <option value="" disabled selected>Select</option>
+                <option value="Laptop">Yes</option>
+                <option value="Laptop">No</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="photo">Upload Picture</label>
+            <input type="file" id="photo" name="photo" accept="image/*" required>
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</body>
+
+</html>
